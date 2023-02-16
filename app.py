@@ -7,7 +7,8 @@ app = Dash(__name__)
 df = pd.read_csv("data/final.csv")
 
 app.layout = html.Div([
-	html.H1("Impact of pink morsel's price increase on overall sales.", className='header'),
+	html.H1("Impact of pink morsel's price increase on overall sales.",
+	id='header', className='header'),
 	dcc.Graph(id='pink_morsel_sales'),
 	dcc.RadioItems(
 		['All', 'north', 'south', 'east', 'west'], 'All', id='regions',
